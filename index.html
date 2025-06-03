@@ -24,7 +24,9 @@
                 <p class="date">Rabu, 18 Juni 2025</p>
                 <div class="to-guest">
                     <p>Kepada Yth:</p>
-                    <p class="guest-name">Bapak/Ibu/Saudara/i</p>
+                    <p class="guest-name">Bapak/Ibu/Saudara/i 
+                        <div class="guest-name"><span></span></div>
+                    </p>
                 </div>
                 <button id="open-invitation" class="btn">Buka Undangan</button>
             </div>
@@ -542,6 +544,14 @@
                 modalImage.alt = galleryImages[index].alt;
             }
         });
+
+        const urlParams = new URLSearchParams(window.location.search)
+        const nama = urlParams.get('n')
+
+
+        const namaContainer = document.querySelector('.guest-name span')
+        namaContainer.innerText = nama
+
     </script>
 </body>
 </html>
